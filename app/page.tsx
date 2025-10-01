@@ -592,7 +592,8 @@ const callSimplifyAPI = async (formType: string) => {
                   textAlign: 'center'
                 }}>
                   <h3>30-Day Access</h3>
-                  <div style={{fontSize: '2.5rem', fontWeight: '700', color: '#4f46e5', margin: '1rem 0'}}>$49</div>
+                  <div style={{fontSize: '2.5rem', fontWeight: '700', color: '#4f46e5'}}>$59<span style={{fontSize: '1rem', fontWeight: '400'}}>/month</span></div>
+<p style={{margin: '1rem 0', fontSize: '0.9rem'}}>Unlimited simplifications • Cancel anytime</p>
                   <ul style={{listStyle: 'none', textAlign: 'left', margin: '1.5rem 0', padding: 0}}>
                     <li style={{padding: '0.5rem 0'}}>✓ Unlimited simplifications</li>
                     <li style={{padding: '0.5rem 0'}}>✓ All 7 languages</li>
@@ -623,7 +624,8 @@ const callSimplifyAPI = async (formType: string) => {
                   textAlign: 'center'
                 }}>
                   <h3>Family Bundle</h3>
-                  <div style={{fontSize: '2.5rem', fontWeight: '700', color: '#4f46e5', margin: '1rem 0'}}>$119</div>
+                 <div style={{fontSize: '2.5rem', fontWeight: '700', color: '#4f46e5'}}>$119<span style={{fontSize: '1rem', fontWeight: '400'}}>/month</span></div>
+<p style={{margin: '1rem 0', fontSize: '0.9rem'}}>Multiple applicants • Cancel anytime</p>
                   <ul style={{listStyle: 'none', textAlign: 'left', margin: '1.5rem 0', padding: 0}}>
                     <li style={{padding: '0.5rem 0'}}>✓ 90-day access</li>
                     <li style={{padding: '0.5rem 0'}}>✓ Multiple applicants</li>
