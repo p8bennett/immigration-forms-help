@@ -594,7 +594,6 @@ const callSimplifyAPI = async (formType: string) => {
                  <div style={{fontSize: '2.5rem', fontWeight: '700', color: '#4f46e5'}}>$119<span style={{fontSize: '1rem', fontWeight: '400'}}>/month</span></div>
 <p style={{margin: '1rem 0', fontSize: '0.9rem'}}>Multiple applicants • Cancel anytime</p>
                   <ul style={{listStyle: 'none', textAlign: 'left', margin: '1.5rem 0', padding: 0}}>
-                    <li style={{padding: '0.5rem 0'}}>✓ 90-day access</li>
                     <li style={{padding: '0.5rem 0'}}>✓ Multiple applicants</li>
                     <li style={{padding: '0.5rem 0'}}>✓ Form comparison</li>
                     <li style={{padding: '0.5rem 0'}}>✓ Priority support</li>
