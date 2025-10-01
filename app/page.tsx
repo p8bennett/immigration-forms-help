@@ -447,17 +447,22 @@ const callSimplifyAPI = async (formType: string) => {
   {id: 'I-131', icon: '✈️', text: 'Application for Travel Document - Advance Parole, Re-entry Permit, or Refugee Travel Document'},
   {id: 'I-751', icon: '📋', text: 'Petition to Remove Conditions on Permanent Residence - For conditional green card holders'}
 ].map((form) => (
-  <div 
-    key={form.id}
-    onClick={() => selectForm(form.id)}
-    style={{
-      background: selectedForm === form.id ? 'linear-gradient(135deg, #eef2ff, #e0e7ff)' : 'linear-gradient(135deg, #fff, #f8fafc)',
-      border: selectedForm === form.id ? '2px solid #4f46e5' : '2px solid #e5e7eb',
-      borderRadius: '12px',
-      padding: '1.5rem',
-      cursor: 'pointer',
-      transition: 'all 0.3s ease'
-    }}
+ <div 
+  key={form.id}
+  onClick={() => selectForm(form.id)}
+  style={{
+    background: selectedForm === form.id ? 'linear-gradient(135deg, #eef2ff, #e0e7ff)' : 'linear-gradient(135deg, #fff, #f8fafc)',
+    border: selectedForm === form.id ? '2px solid #4f46e5' : '2px solid #e5e7eb',
+    borderRadius: '12px',
+    padding: '1.5rem',
+    cursor: 'pointer',
+    transition: 'all 0.3s ease'
+  }}
+>
+  <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>{form.icon}</div>
+  <h4 style={{color: '#1f2937', marginBottom: '0.5rem', fontWeight: '600'}}>{form.id}</h4>
+  <p data-translate={form.desc} style={{color: '#6b7280', fontSize: '0.9rem'}}>{form.text}</p>
+</div>
   >
     <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>{form.icon}</div>
     <h4 style={{color: '#1f2937', marginBottom: '0.5rem', fontWeight: '600'}}>{form.id}</h4>
