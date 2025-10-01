@@ -285,7 +285,7 @@ const callSimplifyAPI = async (formType: string) => {
           </nav>
         </header>
 
-        {/* Hero Section */}
+       {/* Hero Section */}
         <section style={{
           textAlign: 'center',
           padding: '5rem 0',
@@ -298,23 +298,115 @@ const callSimplifyAPI = async (formType: string) => {
           <h1 data-translate="hero-title" style={{
             fontSize: '3.5rem',
             fontWeight: '800',
-            marginBottom: '1.5rem',
+            marginBottom: '1rem',
             lineHeight: '1.2',
             textShadow: '0 4px 20px rgba(0, 0, 0, 0.3)'
           }}>
             Immigration Forms Made Simple
           </h1>
-          <p data-translate="hero-subtitle" style={{
-            fontSize: '1.3rem',
-            marginBottom: '2rem',
+          
+          {/* Supporting Subline */}
+          <p style={{
+            fontSize: '1.5rem',
+            fontWeight: '600',
+            marginBottom: '1rem',
             opacity: '0.95',
+            color: '#fef3c7'
+          }}>
+            Select a form, get instant plain-language guidance in minutes
+          </p>
+          
+          <p data-translate="hero-subtitle" style={{
+            fontSize: '1.1rem',
+            marginBottom: '3rem',
+            opacity: '0.9',
             maxWidth: '600px',
             marginLeft: 'auto',
             marginRight: 'auto'
           }}>
-            Transform complex USCIS documents into plain-language explanations in multiple languages. No legal jargon, just clear guidance.
+            Transform complex USCIS documents into clear explanations in 7 languages. No legal jargon, just straightforward guidance.
           </p>
+
+          {/* 3-Step Process Guide */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '2rem',
+            maxWidth: '900px',
+            margin: '0 auto',
+            marginTop: '3rem'
+          }}>
+            <div style={{
+              background: 'rgba(255, 255, 255, 0.15)',
+              backdropFilter: 'blur(10px)',
+              borderRadius: '15px',
+              padding: '1.5rem',
+              border: '1px solid rgba(255, 255, 255, 0.2)'
+            }}>
+              <div style={{
+                fontSize: '2.5rem',
+                marginBottom: '0.5rem'
+              }}>📋</div>
+              <h3 style={{
+                fontSize: '1.1rem',
+                fontWeight: '700',
+                marginBottom: '0.5rem'
+              }}>1. Select Form</h3>
+              <p style={{
+                fontSize: '0.9rem',
+                opacity: '0.9',
+                margin: 0
+              }}>Choose from common USCIS forms or upload your own</p>
+            </div>
+
+            <div style={{
+              background: 'rgba(255, 255, 255, 0.15)',
+              backdropFilter: 'blur(10px)',
+              borderRadius: '15px',
+              padding: '1.5rem',
+              border: '1px solid rgba(255, 255, 255, 0.2)'
+            }}>
+              <div style={{
+                fontSize: '2.5rem',
+                marginBottom: '0.5rem'
+              }}>✨</div>
+              <h3 style={{
+                fontSize: '1.1rem',
+                fontWeight: '700',
+                marginBottom: '0.5rem'
+              }}>2. AI Simplifies</h3>
+              <p style={{
+                fontSize: '0.9rem',
+                opacity: '0.9',
+                margin: 0
+              }}>Get instant plain-language explanations in your language</p>
+            </div>
+
+            <div style={{
+              background: 'rgba(255, 255, 255, 0.15)',
+              backdropFilter: 'blur(10px)',
+              borderRadius: '15px',
+              padding: '1.5rem',
+              border: '1px solid rgba(255, 255, 255, 0.2)'
+            }}>
+              <div style={{
+                fontSize: '2.5rem',
+                marginBottom: '0.5rem'
+              }}>📥</div>
+              <h3 style={{
+                fontSize: '1.1rem',
+                fontWeight: '700',
+                marginBottom: '0.5rem'
+              }}>3. Download</h3>
+              <p style={{
+                fontSize: '0.9rem',
+                opacity: '0.9',
+                margin: 0
+              }}>Save as PDF or DOCX for easy reference</p>
+            </div>
+          </div>
         </section>
+       
 
         {/* Main Tool */}
         <div style={{maxWidth: '1400px', margin: '0 auto', padding: '0 20px'}}>
