@@ -439,13 +439,13 @@ const callSimplifyAPI = async (formType: string) => {
                   marginBottom: '2rem'
                 }}>
               {[
-  {id: 'I-130', desc: 'form-i130-desc', text: 'Petition for Alien Relative - Family-based immigration petition'},
-{id: 'I-485', desc: 'form-i485-desc', text: 'Application for Permanent Residence (Green Card)'},
-{id: 'I-765', desc: 'form-i765-desc', text: 'Application for Employment Authorization Document'},
-{id: 'N-400', desc: 'form-n400-desc', text: 'Application for Naturalization (U.S. Citizenship)'},
-{id: 'I-864', desc: 'form-i864-desc', text: 'Affidavit of Support Under Section 213A'},
-{id: 'I-131', text: 'Application for Travel Document - Advance Parole, Re-entry Permit, or Refugee Travel Document'},
-{id: 'I-751', text: 'Petition to Remove Conditions on Permanent Residence - For conditional green card holders'}
+  {id: 'I-130', desc: 'form-i130-desc', text: 'Petition for Alien Relative - Family-based immigration petition', processing: 'Approximate processing time: 11-17 months'},
+  {id: 'I-485', desc: 'form-i485-desc', text: 'Application for Permanent Residence (Green Card)', processing: 'Approximate processing time: 8-14 months'},
+  {id: 'I-765', desc: 'form-i765-desc', text: 'Application for Employment Authorization Document', processing: 'Approximate processing time: 3-5 months'},
+  {id: 'N-400', desc: 'form-n400-desc', text: 'Application for Naturalization (U.S. Citizenship)', processing: 'Approximate processing time: 6-10 months'},
+  {id: 'I-864', desc: 'form-i864-desc', text: 'Affidavit of Support Under Section 213A', processing: 'Processed with primary application'},
+  {id: 'I-131', text: 'Application for Travel Document - Advance Parole, Re-entry Permit, or Refugee Travel Document', processing: 'Approximate processing time: 3-6 months'},
+  {id: 'I-751', text: 'Petition to Remove Conditions on Permanent Residence - For conditional green card holders', processing: 'Approximate processing time: 12-24 months'}
 ].map((form) => (
   <div 
     key={form.id}
@@ -460,7 +460,8 @@ const callSimplifyAPI = async (formType: string) => {
     }}
   >
     <h4 style={{color: '#1f2937', marginBottom: '0.5rem', fontWeight: '600'}}>{form.id}</h4>
-    <p data-translate={form.desc} style={{color: '#6b7280', fontSize: '0.9rem'}}>{form.text}</p>
+    <p data-translate={form.desc} style={{color: '#6b7280', fontSize: '0.9rem', marginBottom: '0.5rem'}}>{form.text}</p>
+    <p style={{color: '#9ca3af', fontSize: '0.8rem', fontStyle: 'italic'}}>{form.processing}</p>
   </div>
 ))}
               {/* File Upload */}
