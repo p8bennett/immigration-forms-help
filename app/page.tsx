@@ -589,7 +589,7 @@ const callSimplifyAPI = async (formType: string) => {
                   padding: '2rem',
                   textAlign: 'center'
                 }}>
-                  <h3>30-Day Access</h3>
+                  <h3>Solo</h3>
                   <div style={{fontSize: '2.5rem', fontWeight: '700', color: '#4f46e5'}}>$59<span style={{fontSize: '1rem', fontWeight: '400'}}>/month</span></div>
 <p style={{margin: '1rem 0', fontSize: '0.9rem'}}>Unlimited simplifications • Cancel anytime</p>
                   <ul style={{listStyle: 'none', textAlign: 'left', margin: '1.5rem 0', padding: 0}}>
