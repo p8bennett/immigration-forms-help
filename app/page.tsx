@@ -438,33 +438,28 @@ const callSimplifyAPI = async (formType: string) => {
                   gap: '1rem',
                   marginBottom: '2rem'
                 }}>
-               {[
+              {[
   {id: 'I-130', icon: '👥', desc: 'form-i130-desc', text: 'Petition for Alien Relative - Family-based immigration petition'},
   {id: 'I-485', icon: '🟢', desc: 'form-i485-desc', text: 'Application for Permanent Residence (Green Card)'},
   {id: 'I-765', icon: '💼', desc: 'form-i765-desc', text: 'Application for Employment Authorization Document'},
-  {id: 'N-400', icon: '🎖️', desc: 'form-n400-desc', text: 'Application for Naturalization (U.S. Citizenship)'},
+  {id: 'N-400', icon: '⭐', desc: 'form-n400-desc', text: 'Application for Naturalization (U.S. Citizenship)'},
   {id: 'I-864', icon: '💰', desc: 'form-i864-desc', text: 'Affidavit of Support Under Section 213A'},
   {id: 'I-131', icon: '✈️', text: 'Application for Travel Document - Advance Parole, Re-entry Permit, or Refugee Travel Document'},
   {id: 'I-751', icon: '📋', text: 'Petition to Remove Conditions on Permanent Residence - For conditional green card holders'}
 ].map((form) => (
- <div 
-  key={form.id}
-  onClick={() => selectForm(form.id)}
-  style={{
-    background: selectedForm === form.id ? 'linear-gradient(135deg, #eef2ff, #e0e7ff)' : 'linear-gradient(135deg, #fff, #f8fafc)',
-    border: selectedForm === form.id ? '2px solid #4f46e5' : '2px solid #e5e7eb',
-    borderRadius: '12px',
-    padding: '1.5rem',
-    cursor: 'pointer',
-    transition: 'all 0.3s ease'
-  }}
->
-  <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>{form.icon}</div>
-  <h4 style={{color: '#1f2937', marginBottom: '0.5rem', fontWeight: '600'}}>{form.id}</h4>
-  <p data-translate={form.desc} style={{color: '#6b7280', fontSize: '0.9rem'}}>{form.text}</p>
-</div>
+  <div 
+    key={form.id}
+    onClick={() => selectForm(form.id)}
+    style={{
+      background: selectedForm === form.id ? 'linear-gradient(135deg, #eef2ff, #e0e7ff)' : 'linear-gradient(135deg, #fff, #f8fafc)',
+      border: selectedForm === form.id ? '2px solid #4f46e5' : '2px solid #e5e7eb',
+      borderRadius: '12px',
+      padding: '1.5rem',
+      cursor: 'pointer',
+      transition: 'all 0.3s ease'
+    }}
   >
-    <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>{form.icon}</div>
+    {form.icon && <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>{form.icon}</div>}
     <h4 style={{color: '#1f2937', marginBottom: '0.5rem', fontWeight: '600'}}>{form.id}</h4>
     <p data-translate={form.desc} style={{color: '#6b7280', fontSize: '0.9rem'}}>{form.text}</p>
   </div>
