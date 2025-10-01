@@ -228,10 +228,7 @@ const callSimplifyAPI = async (formType: string) => {
               margin: 0,
               padding: 0
             }}>
-              <li><a href="#features" data-translate="nav-features" style={{color: '#374151', textDecoration: 'none', fontWeight: '500'}}>Features</a></li>
               <li><a href="/blog" style={{color: '#374151', textDecoration: 'none'}}>Blog</a></li>
-              <li><a href="#pricing" data-translate="nav-pricing" style={{color: '#374151', textDecoration: 'none', fontWeight: '500'}}>Pricing</a></li>
-              <li><a href="#support" data-translate="nav-support" style={{color: '#374151', textDecoration: 'none', fontWeight: '500'}}>Support</a></li>
               <li style={{position: 'relative'}}>
                 <button 
                   onClick={() => setShowLanguageMenu(!showLanguageMenu)}
