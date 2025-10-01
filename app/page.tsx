@@ -352,8 +352,8 @@ const callSimplifyAPI = async (formType: string) => {
                     {id: 'I-765', desc: 'form-i765-desc', text: 'Application for Employment Authorization Document'},
                     {id: 'N-400', desc: 'form-n400-desc', text: 'Application for Naturalization (U.S. Citizenship)'},
                     {id: 'I-864', desc: 'form-i864-desc', text: 'Affidavit of Support Under Section 213A'},
-                    {id: 'I-131', desc: 'form-i131-desc', text: 'Application for Travel Document (Advance Parole/Re-entry Permit)'},
-                    {id: 'I-751', desc: 'form-i751-desc', text: 'Petition to Remove Conditions on Permanent Residence'}
+                    {id: 'I-131', text: 'Application for Travel Document - Advance Parole, Re-entry Permit, or Refugee Travel Document'},
+{id: 'I-751', text: 'Petition to Remove Conditions on Permanent Residence - For conditional green card holders'}
                   ].map((form) => (
                     <div 
                       key={form.id}
