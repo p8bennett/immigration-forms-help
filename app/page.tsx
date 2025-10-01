@@ -494,7 +494,7 @@ const callSimplifyAPI = async (formType: string) => {
                       cursor: 'pointer'
                     }}
                   >
-                    🔓 Unlock Full Simplification - $49
+                    🔓 Unlock Full Simplification - $59/month
                   </button>
                 </div>
               </div>
