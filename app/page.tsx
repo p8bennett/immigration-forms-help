@@ -552,36 +552,6 @@ const callSimplifyAPI = async (formType: string) => {
                 margin: '2rem 0'
               }}>
                 <div style={{
-                  background: 'linear-gradient(135deg, #fff, #f8fafc)',
-                  border: '2px solid #e5e7eb',
-                  borderRadius: '15px',
-                  padding: '2rem',
-                  textAlign: 'center'
-                }}>
-                  <h3>Trial</h3>
-                  <div style={{fontSize: '2.5rem', fontWeight: '700', color: '#4f46e5', margin: '1rem 0'}}>Free</div>
-                  <ul style={{listStyle: 'none', textAlign: 'left', margin: '1.5rem 0', padding: 0}}>
-                    <li style={{padding: '0.5rem 0'}}>✓ 1 page simplification</li>
-                    <li style={{padding: '0.5rem 0'}}>✓ English & Spanish only</li>
-                    <li style={{padding: '0.5rem 0'}}>✓ Basic explanations</li>
-                  </ul>
-                  <button 
-                    onClick={() => selectPlan('trial')}
-                    style={{
-                      background: 'transparent',
-                      border: '2px solid #4f46e5',
-                      color: '#4f46e5',
-                      padding: '0.75rem 2rem',
-                      borderRadius: '50px',
-                      fontWeight: '600',
-                      cursor: 'pointer'
-                    }}
-                  >
-                    Start Free Trial
-                  </button>
-                </div>
-
-                <div style={{
                   background: 'linear-gradient(135deg, #eef2ff, #e0e7ff)',
                   border: '2px solid #4f46e5',
                   borderRadius: '15px',
