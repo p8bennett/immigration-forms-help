@@ -158,7 +158,6 @@ const callSimplifyAPI = async (formType: string) => {
 
   const selectPlan = (planType: string) => {
     const plans: { [key: string]: string } = {
-      'trial': 'Free Trial',
       'solo': 'Solo Plan ($59/month)',
       'family': 'Family Plan ($119/month)',
     };
