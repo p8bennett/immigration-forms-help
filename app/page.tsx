@@ -651,6 +651,12 @@ const callSimplifyAPI = async (formType: string) => {
             </div>
           </div>
         )}
+        {/* Footer */}
+      <footer style={{background: 'rgba(255, 255, 255, 0.95)', padding: '2rem', textAlign: 'center', marginTop: '4rem'}}>
+        <p style={{fontSize: '0.875rem', color: '#6b7280', maxWidth: '1200px', margin: '0 auto'}}>
+          USImmigrationFormsHelp.com is not affiliated with USCIS, DHS, or any government agency. This site provides plain-language explanations for informational purposes only and is not legal advice. <a href="/disclosures" style={{color: '#4f46e5', textDecoration: 'underline'}}>View full disclosure</a>
+        </p>
+      </footer>
       </div>
     </>
   );
