@@ -159,10 +159,8 @@ const callSimplifyAPI = async (formType: string) => {
   const selectPlan = (planType: string) => {
     const plans: { [key: string]: string } = {
       'trial': 'Free Trial',
-      '30day': '30-Day Access Pass ($49)',
-      'family': 'Family Bundle ($119)',
-      'pro-solo': 'Solo Professional ($49/month)',
-      'team': 'Team Plan ($99/month)'
+      'solo': 'Solo Plan ($59/month)',
+      'family': 'Family Plan ($119/month)',
     };
     
     alert(`You selected: ${plans[planType]}\n\nIn the full version, this would redirect to Stripe checkout.`);
