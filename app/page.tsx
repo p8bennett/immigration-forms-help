@@ -157,14 +157,14 @@ const callSimplifyAPI = async (formType: string) => {
   };
 
   const selectPlan = (planType: string) => {
-    const plans: { [key: string]: string } = {
-      'solo': 'Solo Plan ($59/month)',
-      'family': 'Family Plan ($119/month)',
-    };
-    
-    alert(`You selected: ${plans[planType]}\n\nIn the full version, this would redirect to Stripe checkout.`);
-    setShowPricing(false);
+  const plans: { [key: string]: string } = {
+    'solo': 'Solo Plan ($59/month)',
+    'family': 'Family Plan ($119/month)',
   };
+  
+  alert(`You selected: ${plans[planType]}\n\nIn the full version, this would redirect to Stripe checkout.`);
+  setShowPricing(false);
+};
 
   useEffect(() => {
     updateUI();
