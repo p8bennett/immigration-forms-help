@@ -162,7 +162,7 @@ const callSimplifyAPI = async (formType: string) => {
     'family': 'https://buy.stripe.com/6oUbIU3gO8Ph9TGgc4',
   };
   
-  window.location.href = plans[planType];
+ window.location.href = plans[planType];
 };
   setShowPricing(false);
 };
