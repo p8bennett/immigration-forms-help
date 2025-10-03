@@ -158,11 +158,12 @@ const callSimplifyAPI = async (formType: string) => {
 
   const selectPlan = (planType: string) => {
   const plans: { [key: string]: string } = {
-    'solo': 'Solo Plan ($59/month)',
-    'family': 'Family Plan ($119/month)',
+    'solo': 'https://buy.stripe.com/fZu3co5oWaXp7Lye3W',
+    'family': 'https://buy.stripe.com/6oUbIU3gO8Ph9TGgc4',
   };
   
-  alert(`You selected: ${plans[planType]}\n\nIn the full version, this would redirect to Stripe checkout.`);
+  window.location.href = plans[planType];
+};
   setShowPricing(false);
 };
 
