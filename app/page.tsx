@@ -163,7 +163,6 @@ const callSimplifyAPI = async (formType: string) => {
   };
   
  window.location.href = plans[planType];
-};
   setShowPricing(false);
 };
 
