@@ -6,8 +6,8 @@ export default function HomePage() {
   return (
     <main style={{ fontFamily: "system-ui, sans-serif", color: "#1f2937", padding: "2rem", maxWidth: "1200px", margin: "0 auto" }}>
       
-      {/* Header with language switcher */}
-      <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "3rem" }}>
+      {/* Header with site title + language dropdown */}
+      <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "3rem", flexWrap: "wrap", gap: "1rem" }}>
         <h1 style={{ fontSize: "2rem", fontWeight: "700" }}>US Immigration Forms Help</h1>
         <LanguageSwitcher />
       </header>
@@ -31,6 +31,7 @@ export default function HomePage() {
     </main>
   );
 }
+
 
 
 
