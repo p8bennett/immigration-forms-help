@@ -45,3 +45,92 @@ export default function SubscribeButtons() {
     </div>
   );
 }
+
+"use client";
+import { useState } from "react";
+
+export default function FormsGrid() {
+  const [selectedForm, setSelectedForm] = useState<string | null>(null);
+
+  const forms = [
+    { id: "I-130", icon: "👨‍👩‍👧", desc: "form-i130-desc", text: "Petition for Alien Relative - Family-based immigration petition" },
+    { id: "I-485", icon: "🟢", desc: "form-i485-desc", text: "Application for Permanent Residence (Green Card)" },
+    { id: "I-765", icon: "💼", desc: "form-i765-desc", text: "Application for Employment Authorization Document" },
+    { id: "N-400", icon: "🎖️", desc: "form-n400-desc", text: "Application for Naturalization (U.S. Citizenship)" },
+    { id: "I-864", icon: "💰", desc: "form-i864-desc", text: "Affidavit of Support Under Section 213A" },
+    { id: "I-131", icon: "✈️", text: "Application for Travel Document - Advance Parole, Re-entry Permit, or Refugee Travel Document" },
+    { id: "I-751", icon: "📋", text: "Petition to Remove Conditions on Permanent Residence - For conditional green card holders" },
+  ];
+
+  return (
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+        gap: "1.5rem",
+      }}
+    >
+      {forms.map((form) => (
+        <div
+          key={form.id}
+          onClick={() => setSelectedForm(form.id)}
+          style={{
+            background:
+              selectedForm === form.id
+                ? "linear-gradient(135deg, #eef2ff, #e0e7ff)"
+                : "linear-gradient(135deg, #fff, #f8fafc)",
+            border:
+              selectedForm === form.id
+                ? "2px solid #4f46e5"
+                : "2px solid #e5e7eb",
+            borderRadius: "12px",
+            padding: "1.5rem",
+            cursor: "pointer",
+            transition: "all 0.3s ease",
+            boxShadow: selectedForm === form.id ? "0 4px 8px rgba(0,0,0,0.1)" : "",
+          }}
+        >
+          <div style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>
+            {form.icon}
+          </div>
+          <h4
+            style={{
+              color: "#1f2937",
+              marginBottom: "0.5rem",
+              fontWeight: "600",
+            }}
+          >
+            {form.id}
+          </h4>
+          <p
+            data-translate={form.desc}
+            style={{ color: "#6b7280", fontSize: "0.9rem" }}
+          >
+            {form.text}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+"use client";
+
+export default function LanguageSwitcher() {
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "0.5rem",
+        background: "white",
+        border: "1px solid #e5e7eb",
+        borderRadius: "8px",
+        padding: "0.5rem 1rem",
+      }}
+    >
+      <span style={{ fontSize: "1.2rem" }}>🌐</span>
+      <span style={{ fontWeight: "600", color: "#374151" }}>EN</span>
+    </div>
+  );
+}
