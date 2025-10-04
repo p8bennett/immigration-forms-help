@@ -1,0 +1,47 @@
+"use client";
+
+export default function SubscribeButtons() {
+  const selectPlan = (planType: string) => {
+    const plans: Record<string, string> = {
+      solo: "https://buy.stripe.com/fZu3co5oWaXp7Lye3W",
+      family: "https://buy.stripe.com/6oUbIU3gO8Ph9TGgc4",
+    };
+
+    if (plans[planType]) {
+      window.location.href = plans[planType];
+    }
+  };
+
+  return (
+    <div style={{ display: "flex", gap: "1rem" }}>
+      <button
+        onClick={() => selectPlan("solo")}
+        style={{
+          padding: "1rem 2rem",
+          background: "#4f46e5",
+          color: "white",
+          borderRadius: "8px",
+          fontWeight: "600",
+          cursor: "pointer",
+          border: "none",
+        }}
+      >
+        Solo Plan
+      </button>
+      <button
+        onClick={() => selectPlan("family")}
+        style={{
+          padding: "1rem 2rem",
+          background: "#10b981",
+          color: "white",
+          borderRadius: "8px",
+          fontWeight: "600",
+          cursor: "pointer",
+          border: "none",
+        }}
+      >
+        Family Plan
+      </button>
+    </div>
+  );
+}
