@@ -5,5 +5,7 @@
       "destination": "https://www.usimmigrationformshelp.com/$1",
       "permanent": true
     }
-  ]
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
 }
