@@ -1,7 +1,5 @@
 import Header from "./components/Header";
 import SubscribeButtons from "./components/SubscribeButtons";
-import FormsGrid from "./components/FormsGrid";
-import Footer from "./components/Footer";
 
 export default function HomePage() {
   return (
