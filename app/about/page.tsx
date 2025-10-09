@@ -47,7 +47,7 @@ export default function AboutPage() {
           confidence.
         </p>
         <a
-          href="/"
+          href="/" 12
           style={{
             display: "inline-block",
             backgroundColor: "#4f46e5",
