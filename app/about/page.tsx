@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AboutPage() {
   return (
     <main
@@ -23,18 +25,26 @@ export default function AboutPage() {
           boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
         }}
       >
+        <Image
+          src="https://www.usimmigrationformshelp.com/icon.png"
+          alt="USImmigrationFormsHelp Logo"
+          width={80}
+          height={80}
+          style={{ marginBottom: "20px", borderRadius: "12px" }}
+        />
         <h1 style={{ fontSize: "2rem", marginBottom: "20px", color: "#4f46e5" }}>
           About USImmigrationFormsHelp
         </h1>
         <p style={{ lineHeight: 1.7, fontSize: "1.1rem", marginBottom: "30px" }}>
-          USImmigrationFormsHelp is designed to simplify the complex USCIS
-          forms process. We provide plain-language explanations, multilingual
-          support, and easy-to-follow guides to help individuals understand
-          their documents before submission.
+          USImmigrationFormsHelp is a plain-language guide designed to simplify
+          complex USCIS immigration forms. We help individuals understand their
+          paperwork before submitting it — with multilingual support and
+          straightforward explanations.
         </p>
         <p style={{ lineHeight: 1.7, fontSize: "1.1rem", marginBottom: "30px" }}>
-          Our goal is to make U.S. immigration forms less intimidating,
-          empowering you to complete them confidently without legal jargon.
+          Our goal is to make U.S. immigration documentation accessible and
+          understandable for everyone. No legal jargon — just clarity and
+          confidence.
         </p>
         <a
           href="/"
@@ -48,8 +58,12 @@ export default function AboutPage() {
             textDecoration: "none",
             transition: "background-color 0.3s ease",
           }}
-          onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#4338ca")}
-          onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#4f46e5")}
+          onMouseOver={(e) =>
+            (e.currentTarget.style.backgroundColor = "#4338ca")
+          }
+          onMouseOut={(e) =>
+            (e.currentTarget.style.backgroundColor = "#4f46e5")
+          }
         >
           ← Back to Home
         </a>
