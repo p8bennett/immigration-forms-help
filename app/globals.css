@@ -1,10 +1,14 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* Light theme colors */
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
+/* Dark theme colors */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -12,8 +16,9 @@
   }
 }
 
+/* Apply background + text globally */
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
