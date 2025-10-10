@@ -1,9 +1,13 @@
 "use client";
 import Image from "next/image";
+import { motion } from "framer-motion"; // Add framer-motion for animation
 
 export default function Header() {
   return (
-    <header
+    <motion.header
+      initial={{ opacity: 0, y: -30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
       style={{
         display: "flex",
         flexDirection: "column",
@@ -34,6 +38,7 @@ export default function Header() {
       <p style={{ fontSize: "1rem", marginTop: "0.25rem" }}>
         Immigration Forms Made Simple 🇺🇸
       </p>
+
       <style jsx>{`
         @media (max-width: 600px) {
           header {
@@ -47,6 +52,6 @@ export default function Header() {
           }
         }
       `}</style>
-    </header>
+    </motion.header>
   );
 }
