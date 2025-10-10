@@ -1,3 +1,4 @@
+import Hero from "./components/Hero";
 import Header from "./components/Header";
 import SubscribeButtons from "./components/SubscribeButtons";
 
@@ -5,6 +6,7 @@ export default function HomePage() {
   return (
     <main style={{ fontFamily: "system-ui, sans-serif", color: "#1f2937", padding: "2rem", maxWidth: "1200px", margin: "0 auto" }}>
       <Header />
+      <Hero />
       <section style={{ marginBottom: "4rem", textAlign: "center" }}>
         <h2 style={{ fontSize: "1.5rem", fontWeight: "600", marginBottom: "1rem" }}>Choose Your Plan</h2>
         <SubscribeButtons />
