@@ -1,7 +1,7 @@
 import Hero from "./components/Hero";
 import Header from "./components/Header";
 import SubscribeButtons from "./components/SubscribeButtons";
-
+// test redeploy
 export default function HomePage() {
   return (
     <main style={{ fontFamily: "system-ui, sans-serif", color: "#1f2937", padding: "2rem", maxWidth: "1200px", margin: "0 auto" }}>
@@ -19,6 +19,7 @@ export default function HomePage() {
     </main>
   );
 }
+
 
 
 
