@@ -1,0 +1,16 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://www.usimmigrationformshelp.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "https://:subdomain.usimmigrationformshelp.com/(.*)",
+      "destination": "https://www.usimmigrationformshelp.com/$1",
+      "permanent": true
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}

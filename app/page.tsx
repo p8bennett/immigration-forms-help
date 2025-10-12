@@ -1,103 +1,87 @@
-import Image from "next/image";
+"use client";
+
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [language, setLanguage] = useState("en");
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+  // Load and detect language
+  useEffect(() => {
+    const savedLang = localStorage.getItem("language");
+    if (savedLang) setLanguage(savedLang);
+    else if (navigator.language.startsWith("es")) {
+      setLanguage("es");
+      localStorage.setItem("language", "es");
+    }
+  }, []);
+
+  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newLang = e.target.value;
+    setLanguage(newLang);
+    localStorage.setItem("language", newLang);
+  };
+
+  return (
+    <main className="min-h-screen bg-gray-50 text-gray-800 scroll-smooth">
+      {/* Language Switcher */}
+      <div className="flex justify-end p-4">
+        <select
+          value={language}
+          onChange={handleLanguageChange}
+          className="border border-gray-300 rounded-md px-3 py-1 text-sm font-emoji shadow-sm hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        >
+          <option value="en">🇺🇸 English</option>
+          <option value="es">🇪🇸 Español</option>
+        </select>
+      </div>
+
+      {/* HERO SECTION */}
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
+        className="text-center mt-10 px-6"
+      >
+        <h1 className="text-3xl font-bold mb-4 text-gray-900">
+          {language === "en"
+            ? "Immigration Forms Made Simple"
+            : "Formularios de Inmigración Hechos Simples"}
+        </h1>
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          {language === "en"
+            ? "Simplify your U.S. immigration paperwork with step-by-step, plain-language explanations and helpful translations for major USCIS forms."
+            : "Simplifica tu documentación de inmigración de EE. UU. con explicaciones paso a paso en lenguaje claro y traducciones útiles para los formularios principales de USCIS."}
+        </p>
+
+        <div className="mt-8">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#forms"
+            className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700 transition"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+            {language === "en" ? "Start Simplifying" : "Comienza a Simplificar"}
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </motion.section>
+
+      {/* INFO SECTION */}
+      <motion.section
+        id="forms"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="max-w-4xl mx-auto mt-16 p-6 bg-white shadow-md rounded-lg hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+      >
+        <h2 className="text-2xl font-semibold mb-4 text-gray-900">
+          {language === "en" ? "How It Works" : "Cómo Funciona"}
+        </h2>
+        <p className="text-gray-700 leading-relaxed">
+          {language === "en"
+            ? "Choose a USCIS form, and we’ll help you understand every part of it in plain English (or Spanish). Get translations, explanations, and tips — all in one place."
+            : "Elige un formulario de USCIS y te ayudaremos a entender cada parte en lenguaje claro (en inglés o español). Obtén traducciones, explicaciones y consejos — todo en un solo lugar."}
+        </p>
+      </motion.section>
+    </main>
   );
 }

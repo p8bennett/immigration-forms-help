@@ -1,26 +1,250 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background-color: #f9fafb;
+  color: #111827;
+  scroll-behavior: smooth;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Fade + Slide Animation */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+.animate-fade-slide {
+  animation: fadeSlide 0.6s ease-out;
+}
+
+/* Mobile menu blur */
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+}
+
+/* Dark Mode */
+.dark body {
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+/* === Header Enhancements === */
+
+/* Button glow & hover lift */
+.toggle-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 6px 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 transparent;
+}
+.toggle-btn:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Smooth theme color transitions */
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Active nav link */
+.active-link {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: #bae6fd;
+}
+
+/* Logo fade-in */
+@keyframes logoFade {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+.animate-logo-fade {
+  animation: logoFade 0.8s ease-in-out;
+}
+/* === Footer Enhancements === */
+
+/* Footer fade-in effect */
+.footer-fade {
+  animation: footerFade 1.2s ease-in-out both;
+}
+@keyframes footerFade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Link glow in footer */
+footer a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+footer a:hover {
+  color: #bae6fd;
+  text-shadow: 0 0 6px rgba(186, 230, 253, 0.6);
+}
+
+/* Scroll-to-top button glow */
+.scroll-top-btn {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+}
+.scroll-top-btn:hover {
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+}
+/* --- Footer --- */
+.footer-fade {
+  animation: footerFade 1.2s ease-in-out both;
+}
+@keyframes footerFade {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.footer-link {
+  position: relative;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+.footer-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  transition: width 0.3s ease;
+}
+.footer-link:hover::after { width: 100%; }
+.footer-link:hover {
+  color: #3b82f6;
+  text-shadow: 0 0 6px rgba(59,130,246,0.4);
+}
+
+/* Scroll-to-top Button */
+.scroll-top-btn {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 8px rgba(59,130,246,0.4);
+}
+.scroll-top-btn:hover {
+  box-shadow: 0 0 12px rgba(59,130,246,0.6);
+}
+
+/* --- Phase 2 Polish Pack --- */
+
+/* Page Fade-in */
+body { animation: fadeInPage 0.7s ease-in-out; }
+@keyframes fadeInPage {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header/Footer Shadows */
+header, footer {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+@media (prefers-color-scheme: dark) {
+  header, footer {
+    box-shadow: 0 2px 10px rgba(255,255,255,0.05);
+  }
+}
+
+/* Floating Contact Button */
+.contact-btn {
+  position: fixed;
+  bottom: 6rem;
+  right: 1
+/* === Phase 2 Visual Polish === */
+
+/* Fade-in animation for pages */
+.fade-page {
+  animation: fadeIn 0.8s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer fade & glow */
+.footer-fade {
+  animation: footerFade 1.2s ease-in-out both;
+}
+@keyframes footerFade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll-to-top button glow */
+.scroll-top-btn {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+}
+.scroll-top-btn:hover {
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header & footer depth shadow sync */
+header,
+footer {
+  transition: box-shadow 0.3s ease;
+}
+header.sticky,
+footer {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Soft background gradient animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+body {
+  background: linear-gradient(-45deg, #f0f9ff, #e0f2fe, #dbeafe, #e0f2fe);
+  background-size: 300% 300%;
+  animation: gradientShift 12s ease infinite;
 }
